@@ -1,0 +1,102 @@
+.page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 24px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.subheading {
+  color: black;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+.subsubheading {
+  color: #515151;
+  margin-bottom: 32px;
+  font-size: 1rem;
+}
+
+.platformList {
+  display: grid;
+  gap: 16px;
+}
+
+.platformCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.platformCard:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.platformInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconPlaceholder {
+  width: 40px;
+  height: 40px;
+  background-color: #e5e7eb;
+  border-radius: 50%;
+}
+
+.platformName {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.connect {
+  background-color: #7e7e7e;
+  color: white;
+}
+
+.connect:hover {
+  background-color: #2563eb;
+}
+
+.connected {
+  background-color: #dcfce7;
+  color: #166534;
+  cursor: default;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+/* Brand Colors */
+.platformCard:nth-child(1) .icon { color: #E1306C; } /* Instagram */
+.platformCard:nth-child(2) .icon { color: #1877F2; } /* Facebook */
+.platformCard:nth-child(3) .icon { color: #0A66C2; } /* LinkedIn */
+.platformCard:nth-child(4) .icon { color: #1DA1F2; } /* Twitter/X */
+.platformCard:nth-child(5) .icon { color: #BD081C; } /* Pinterest */
+.platformCard:nth-child(6) .icon { color: #FF0000; } /* YouTube */

@@ -1,0 +1,51 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background: black;
+  overflow: hidden;
+  color: #333;
+}
+
+.heroContent {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.textContainer {
+  flex: 1;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #ff3b3b;
+}
+
+

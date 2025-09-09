@@ -1,88 +1,223 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
+.pageGifBg {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  overflow: hidden;
 }
 
-.form {
+.pageGifBg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: rgb(128, 127, 127);
+  width: 100vw;
+  height: 100vh;
+}
+
+.centeredContent {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginCard {
+  background: rgb(255, 255, 255);
+  border-radius: 18px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid #fff;
+  max-width: none;
+  width: 570px;
+  padding: 2.5rem;
+  height: 700px;
+  
+}
+
+.loginTitle {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1.3rem;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.loginForm {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
-  width: 100%;
+  gap: 1.3rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: relative; /* For toggle eye positioning */
+}
+
+.inputLabel {
+  color: #101010;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  margin-left: 20px;
 }
 
 .input {
-  margin-bottom: 10px;
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 90%;
+  height: 3.2rem;
+  border-radius: 1rem;
+  border: 1.5px solid #111;
+  font-size: 1rem;
+  color: #232323;
+  padding: 0 1rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  transition: border 0.2s;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.input::placeholder {
+  color: #bcbcbc;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.toggleEye {
+  position: absolute;
+  top: 71%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 2;
+  color: #4877f5;
+}
+
+.toggleEye svg {
+  width: 2.3rem;
+  height: 2.1rem;
 }
 
 .button {
-  padding: 10px;
-  background-color: #4caf50;
+  width: 70%;
+  height: 3.2rem;
+  background: #000000;
+  border-radius: 1rem;
+  border: 1.5px solid #222;
+  font-size: 1.1rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
   color: white;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
-}
-
-.button:hover {
-  background-color: #45a049;
-}
-
-.message {
-  margin-top: 10px;
-  color: red;
-}
-.container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.title {
+  transition: background 0.18s;
+  margin: 0.05rem auto 0.1rem auto;
+  display: block;
   text-align: center;
-  margin-bottom: 20px;
-  color: #333;
 }
 
-.form {
+.button:hover,
+.button:active {
+  background: white;
+  color:#000
+}
+
+.googleButton {
+  margin-top: 0.05rem;
+  margin-bottom: 0.1rem;
   display: flex;
-  flex-direction: column;
-}
-
-.form input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.form button {
-  padding: 10px;
-  background-color: #0070f3;
+  font-size: 1.1rem;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 0, 0);
   color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 15px;
+  border: 1.5px solid black;
+  font-weight: 600;
+  border-radius: 1rem;
+  width: 70%;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.15s;
 }
 
-.form button:hover {
-  background-color: #005bb5;
+.googleButton:hover {
+  color: #fff;
+  background: #232323;
 }
 
-.message {
+.googleIconWrapper {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.7em;
+  margin-top: 0.1em;
+}
+
+.googleButtonText {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #202020;
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-family: 'Inter', Arial, sans-serif;
+  gap: 1rem;
+  margin: 0.3rem 0;
+}
+
+.dividerLine {
+  flex-shrink: 0;
+  width: 100px;
+  height: 1.5px;
+  background: #222;
+  border-radius: 2px;
+  opacity: 0.35;
+}
+
+.signupLink {
   text-align: center;
-  margin-top: 15px;
-  color: #0070f3;
-  font-weight: bold;
+  font-size: 1.08rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  color: #222;
+  margin-top: 0.1rem;
 }
+
+
+.link {
+  color: #4877f5;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.08rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  margin-top: 0.1rem;
+  
+}
+
+.link:hover,
+.link:focus {
+  color: #3056d3;
+  text-decoration: none;
+  outline: none;
+  transition: color 0.2s ease-in-out;
+}
+

@@ -1,0 +1,98 @@
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 36px;
+  border-bottom: 1px solid black;
+  background: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+  z-index: 99;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 27px;
+  letter-spacing: 0.03em;
+  flex: 0 0 120px;
+  margin-left: 80px;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 5rem; /* 36px */
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav a {
+  color: #222;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: #4877f5; /* subtle hover color */
+  outline: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 230px;
+  justify-content: flex-end;
+}
+
+.loginButton {
+  /* styles to make the link look like a button */
+  display: inline-block;
+  padding: 8px 25px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 22px;
+  border: 1.5px solid #222;
+  background-color: #f6f6f6;
+  color: #222;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  user-select: none;
+  white-space: nowrap;
+  margin-top: 5px ;
+}
+
+.loginButton:hover,
+.loginButton:focus {
+  background-color: #3056d3;
+  color: white;
+  outline: none;
+}
+
+.getStartedButton {
+  display: inline-block;
+  padding: 10px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 34px;
+  border: 1.7px solid black;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.getStartedButton:hover,
+.getStartedButton:focus {
+  background-color: #3056d3;
+  outline: none;
+}
